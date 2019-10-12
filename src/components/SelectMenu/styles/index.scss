@@ -1,0 +1,94 @@
+@import '../../../styles/variable';
+@import '../../../styles/color.scss';
+
+.#{$cn-prefix}-select-menu-wrap {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  position: relative;
+  &:focus {
+    outline: 0;
+    .#{$cn-prefix}-select-menu-menu-title {
+      border-color: #40a9ff;
+      border-right-width: 1px !important;
+      outline: 0;
+      box-shadow: 0 0 0 2px rgba(24,144,255,0.2);
+    }
+  }
+  &.#{$cn-prefix}-select-menu-open {
+    .#{$cn-prefix}-select-arrow {
+      transform: rotate(-180deg);
+    }
+  }
+  .#{$cn-prefix}-select-menu-menu-title {
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+    border: 1px solid $grey;
+    border-radius: 4px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 28px;
+    padding: 0 30px 0 8px;
+    font-size: 14px;
+    cursor: pointer;
+    color: rgba(black, 0.65);
+    &.#{$cn-prefix}-select-menu-placeholder {
+      color: $grey;
+    }
+  }
+  .#{$cn-prefix}-select-arrow {
+    color: $grey;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:focus {
+      outline: 0;
+    }
+  }
+  .#{$cn-prefix}-select-menu-menu-list {
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 33px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(117, 115, 115, 0.15);
+    overflow: hidden;
+    font-size: 14px;
+    &:focus {
+      outline: 0;
+    }
+    .#{$cn-prefix}-select-menu-menu-item {
+      padding: 5px 12px;
+      line-height: 22px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: pointer;
+      color: rgba(black, 0.65);
+      transition: background-color 0.2s;
+      &:focus {
+        outline: 0;
+      }
+      &.#{$cn-prefix}-select-menu-menu-item-selected {
+        color: $blue;
+      }
+      &:not(.#{$cn-prefix}-select-menu-menu-item-disabled):hover,
+      &.#{$cn-prefix}-select-menu-menu-item-focus {
+        background-color: $paleBlue;
+      }
+      &.#{$cn-prefix}-select-menu-menu-item-disabled {
+        color: rgba(black, 0.25);
+        cursor: not-allowed;
+      }
+    }
+  }
+}
