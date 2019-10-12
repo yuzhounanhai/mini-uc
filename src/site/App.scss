@@ -1,0 +1,12 @@
+.demo {
+  width: 100%;
+  margin-top: 150px;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.example{
+  display: flex;
+  justify-content: space-around;
+}

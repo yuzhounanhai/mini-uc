@@ -1,5 +1,7 @@
 import * as React from 'react';
 import FadeAnimation from '@/components/Animation/Fade';
+import SelectMenu from '@/components/SelectMenu';
+import './App.scss';
 
 class App extends React.Component {
   state = {
@@ -15,9 +17,53 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <div>
+        <div className="demo">
+          <p>SelectMenu组件-下拉选择</p>
+          <div className="example">
+            <div style={{
+              width: '100px'
+            }}>
+              <SelectMenu
+                placeholder="请选择"
+                tabIndex={1}
+                listData={[{
+                  key: 'a',
+                  value: 'aaaaaa'
+                },{
+                  key: 'b',
+                  value: 'aaabbb'
+                },{
+                  key: 'c',
+                  value: 'aabbcc'
+                },{
+                  key: 'db',
+                  value: '禁用的选项',
+                  disabled: true
+                }]}
+              />
+            </div>
+            <SelectMenu
+              placeholder="请选择"
+              style={{
+                width: '200px',
+              }}
+              initialSelectedKey="b"
+              listData={[{
+                key: 'a',
+                value: 'aaaaaa'
+              },{
+                key: 'b',
+                value: 'aaabbb'
+              },{
+                key: 'c',
+                value: 'aabbcc'
+              }]}
+            />
+          </div>
+        </div>
+        <div className="demo fade-demo">
           <p>Fade组件</p>
-          <div>
+          <div className="example">
             <FadeAnimation show={this.state.animationShow} speed={2}>
               <div style={{
                 width: '100px',
@@ -36,7 +82,6 @@ class App extends React.Component {
                 textAlign: 'center',
                 lineHeight: '100px',
                 fontSize: '12px',
-                marginTop: '10px',
               }}>隐藏不销毁元素</div>
             </FadeAnimation>
             <FadeAnimation show={this.state.animationShow} speed="quick" needDestroy={false}>
@@ -47,7 +92,6 @@ class App extends React.Component {
                 textAlign: 'center',
                 lineHeight: '50px',
                 fontSize: '12px',
-                marginTop: '10px',
               }}>不销毁元素，淡入淡出动画播放更快</div>
             </FadeAnimation>
           </div>
