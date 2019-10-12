@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@types/classnames": "^2.2.9",
+    "@types/lodash": "^4.14.144",
     "autoprefixer": "7.1.6",
     "babel-jest": "20.0.3",
     "babel-loader": "7.1.2",
@@ -20,6 +21,7 @@
     "fs-extra": "3.0.1",
     "html-webpack-plugin": "2.29.0",
     "jest": "20.0.4",
+    "lodash": "^4.17.15",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.8",

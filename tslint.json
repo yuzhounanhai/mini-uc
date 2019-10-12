@@ -5,7 +5,10 @@
     "member-access": [true, "no-public"],
     "ordered-imports": false,
     "object-literal-sort-keys": false,
-    "no-console": false
+    "no-console": false,
+    "no-empty": false,
+    "jsx-no-lambda": false,
+    "prefer-for-of": false
   },
   "linterOptions": {
     "exclude": [
