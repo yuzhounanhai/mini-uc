@@ -8,7 +8,8 @@
     "no-console": false,
     "no-empty": false,
     "jsx-no-lambda": false,
-    "prefer-for-of": false
+    "prefer-for-of": false,
+    "max-classes-per-file": false
   },
   "linterOptions": {
     "exclude": [
