@@ -1,11 +1,8 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import App from './site/App';
-import './index.css';
-import registerServiceWorker from './registerServiceWorker';
-
-ReactDOM.render(
-  <App />,
-  document.getElementById('root') as HTMLElement
-);
-registerServiceWorker();
+import AnimationFade from '@/components/Animation/Fade';
+import SelectMenu from '@/components/SelectMenu';
+import MiniStore from '@/components/MiniStore';
+export {
+  AnimationFade,
+  SelectMenu,
+  MiniStore
+}
