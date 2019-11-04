@@ -13,7 +13,7 @@
 | menuClassName | 附加在下拉选择组件最外层的 className，可以使用该 className 来覆盖样式 | string | '' | |
 | style | 附加在下拉选择组件最外层的style，可以在这里指定该组件的宽度（默认的宽度为100%，撑满父级容器）。 | React.CSSProperties | | |
 | onSelect | 选择回调，在选择时会触发该事件，被禁用的也会触发该选择事件 | (selectedKey: string, selectObj: ListDataItem) => void | | |
-| onBeforeSelected | 选择回调，在真正设置 key 值之前触发该事件，可以返回一个 `true` 值来阻止选择。 | (selectedKey: string, selectObj: ListDataItem) => boolean|null|undefined | | |
+| onBeforeSelected | 选择回调，在真正设置 key 值之前触发该事件，可以返回一个 `true` 值来阻止选择。 | (selectedKey: string, selectObj: ListDataItem) => boolean\|null\|undefined | | |
 | onSelected | 选择回调，在设置 key 值之后触发该事件。 | (selectedKey: string, selectObj: ListDataItem) => void | | |
 
 ### ListDataItem
