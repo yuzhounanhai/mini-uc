@@ -57,7 +57,7 @@ class SlideAnimation extends React.Component<SlideAnimationProps, SlideAnimation
     super(props);
     this.state = {
       isElementShow: this.getIsElementShow(this.props.show),
-      animationClass: this.getClassName(this.props.direction, false),
+      animationClass: this.props.show ? CLASSNAMEMAP.opacityShow : CLASSNAMEMAP.opacityHide,
     }
     this.slideStatus = SLIDESTATUS.finished;
     this.handleTransitionEnd = this.handleTransitionEnd.bind(this);

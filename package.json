@@ -1,6 +1,6 @@
 {
   "name": "mini-uc",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "main": "build/index.js",
   "description": "Mini React UI Components & Util Components, 迷你的 React UI 组件和工具组件。",
   "keywords": [
