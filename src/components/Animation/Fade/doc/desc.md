@@ -1,6 +1,22 @@
-## Fade 过渡
+## AnimationFade 过渡
 
-Fade 组件提供一种淡入淡出的过渡效果。
+AnimationFade 组件提供一种淡入淡出的过渡效果。
+
+## 使用示例
+
+```
+import { AnimationFade } from 'mini-uc';
+
+<AnimationFade
+  show={this.state.animationShow}
+  speed={2}
+  needDestroy={false}
+>
+  <div className="xxxx">
+    <img src="" alt="" />
+  </div>
+</AnimationFade>
+```
 
 ### API
 

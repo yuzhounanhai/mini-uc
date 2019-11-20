@@ -1,7 +1,7 @@
 import * as React from 'react';
-import FadeAnimation from '@/components/Animation/Fade';
+import AnimationFade from '@/components/Animation/Fade';
 import SelectMenu from '@/components/SelectMenu';
-import SlideAnimation from '@/components/Animation/Slide';
+import AnimationSlide from '@/components/Animation/Slide';
 import HomePoster from './components/HomePoster/HomePoster';
 import './App.scss';
 
@@ -23,7 +23,7 @@ class App extends React.Component {
         <div className="demo">
           <p>Animation-Slide组件</p>
           <div className="example">
-            <SlideAnimation
+            <AnimationSlide
               show={this.state.animationShow}
             >
               <div style={{
@@ -34,10 +34,10 @@ class App extends React.Component {
                 lineHeight: '100px',
                 fontSize: '12px',
               }}>SlideDown</div>
-            </SlideAnimation>
+            </AnimationSlide>
           </div>
           <div className="example">
-            <SlideAnimation
+            <AnimationSlide
               show={this.state.animationShow}
               direction="left"
               speed={0.2}
@@ -51,10 +51,10 @@ class App extends React.Component {
                 lineHeight: '100px',
                 fontSize: '12px',
               }}>Left(隐藏即销毁)</div>
-            </SlideAnimation>
+            </AnimationSlide>
           </div>
           <div className="example">
-            <SlideAnimation
+            <AnimationSlide
               show={this.state.animationShow}
               direction="right"
               delay={0.5}
@@ -68,10 +68,10 @@ class App extends React.Component {
                 lineHeight: '100px',
                 fontSize: '12px',
               }}>SlideRight</div>
-            </SlideAnimation>
+            </AnimationSlide>
           </div>
           <div className="example">
-            <SlideAnimation
+            <AnimationSlide
               show={this.state.animationShow}
               direction="up"
               delay={0.5}
@@ -88,7 +88,7 @@ class App extends React.Component {
                 lineHeight: '100px',
                 fontSize: '12px',
               }}>SlideUp</div>
-            </SlideAnimation>
+            </AnimationSlide>
           </div>
         </div>
         <div className="demo">
@@ -139,7 +139,7 @@ class App extends React.Component {
         <div className="demo fade-demo">
           <p>Animation-Fade组件</p>
           <div className="example">
-            <FadeAnimation show={this.state.animationShow} speed={2}>
+            <AnimationFade show={this.state.animationShow} speed={2}>
               <div style={{
                 width: '100px',
                 height: '100px',
@@ -148,8 +148,8 @@ class App extends React.Component {
                 fontSize: '12px',
                 lineHeight: '100px',
               }}>隐藏后销毁元素</div>
-            </FadeAnimation>
-            <FadeAnimation show={this.state.animationShow} speed={2} needDestroy={false}>
+            </AnimationFade>
+            <AnimationFade show={this.state.animationShow} speed={2} needDestroy={false}>
               <div style={{
                 width: '100px',
                 height: '100px',
@@ -158,8 +158,8 @@ class App extends React.Component {
                 lineHeight: '100px',
                 fontSize: '12px',
               }}>隐藏不销毁元素</div>
-            </FadeAnimation>
-            <FadeAnimation show={this.state.animationShow} speed="quick" needDestroy={false}>
+            </AnimationFade>
+            <AnimationFade show={this.state.animationShow} speed="quick" needDestroy={false}>
               <div style={{
                 width: '100px',
                 height: '100px',
@@ -168,7 +168,7 @@ class App extends React.Component {
                 lineHeight: '50px',
                 fontSize: '12px',
               }}>不销毁元素，淡入淡出动画播放更快</div>
-            </FadeAnimation>
+            </AnimationFade>
           </div>
         </div>
       </div>
