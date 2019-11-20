@@ -7,4 +7,5 @@ mini-uc(**mini**-**U**til Components and React UI **C**omponents), 迷你的 Rea
 ### 目录
 
 + [AnimationFade](https://github.com/yuzhounanhai/mini-uc/blob/master/src/components/Animation/Fade/doc/desc.md)
++ [AnimationSlide](https://github.com/yuzhounanhai/mini-uc/blob/master/src/components/Animation/Slide/doc/desc.md): 0.1.5版本新增
 + [SelectMenu](https://github.com/yuzhounanhai/mini-uc/blob/master/src/components/SelectMenu/doc/desc.md)
