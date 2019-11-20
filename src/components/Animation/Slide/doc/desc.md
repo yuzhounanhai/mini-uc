@@ -1,4 +1,4 @@
-## AnimationSlide 滑动出现 (v0.1.5)
+## AnimationSlide 滑动出现 (v0.2.0)
 
 `AnimationSlide` 提供了由隐藏到显示的透明度过渡，并带有一定距离滑动的动画效果。
 
