@@ -28,7 +28,7 @@ import { AnimationSlide } from 'mini-uc';
 
 默认对于四个方向的滑动，将使用动画应用元素的20%（宽/高）的长度，作为滑动动画的起始位置。相关 SASS 代码如下：
 
-```sass
+```
 $cn-prefix: mini-uc
 
 .#{$cn-prefix}-animation-slide-down-begin {
