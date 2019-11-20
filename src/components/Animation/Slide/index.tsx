@@ -23,7 +23,6 @@ export interface SlideAnimationProps {
   delay?: number,
   needDestroy?: boolean,
   exitDelay?: number,
-  transformDistance?: string,
   showTimingFunction?: string,
   hideTimingFunction?: string,
 }
