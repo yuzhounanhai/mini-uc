@@ -1,0 +1,21 @@
+.wrapper {
+  width: 100%;
+  height: 300px;
+  background-color: rgb(55,67,219);
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .part {
+    width: 140px;
+    text-align: center;
+    color: #ffffff;
+    .img {
+      width: 140px;
+      height: 140px;
+      border-radius: 140px;
+      background-color: #ffffff;
+      margin-bottom: 10px;
+    }
+  }
+}

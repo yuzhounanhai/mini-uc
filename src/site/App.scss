@@ -1,3 +1,7 @@
+body {
+  background-color: #eee;
+}
+
 .demo {
   width: 100%;
   margin-top: 150px;
@@ -9,4 +13,8 @@
 .example{
   display: flex;
   justify-content: space-around;
+  margin-bottom: 10px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }

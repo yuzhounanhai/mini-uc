@@ -1,6 +1,8 @@
 import * as React from 'react';
 import FadeAnimation from '@/components/Animation/Fade';
 import SelectMenu from '@/components/SelectMenu';
+import SlideAnimation from '@/components/Animation/Slide';
+import HomePoster from './components/HomePoster/HomePoster';
 import './App.scss';
 
 class App extends React.Component {
@@ -18,6 +20,77 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <div className="demo">
+          <p>Animation-Slide组件</p>
+          <div className="example">
+            <SlideAnimation
+              show={this.state.animationShow}
+            >
+              <div style={{
+                width: '100px',
+                height: '100px',
+                backgroundColor: '#0f0',
+                textAlign: 'center',
+                lineHeight: '100px',
+                fontSize: '12px',
+              }}>SlideDown</div>
+            </SlideAnimation>
+          </div>
+          <div className="example">
+            <SlideAnimation
+              show={this.state.animationShow}
+              direction="left"
+              speed={0.2}
+              needDestroy={true}
+            >
+              <div style={{
+                width: '100px',
+                height: '100px',
+                backgroundColor: '#0f0',
+                textAlign: 'center',
+                lineHeight: '100px',
+                fontSize: '12px',
+              }}>Left(隐藏即销毁)</div>
+            </SlideAnimation>
+          </div>
+          <div className="example">
+            <SlideAnimation
+              show={this.state.animationShow}
+              direction="right"
+              delay={0.5}
+              speed={0.2}
+            >
+              <div style={{
+                width: '100px',
+                height: '100px',
+                backgroundColor: '#0f0',
+                textAlign: 'center',
+                lineHeight: '100px',
+                fontSize: '12px',
+              }}>SlideRight</div>
+            </SlideAnimation>
+          </div>
+          <div className="example">
+            <SlideAnimation
+              show={this.state.animationShow}
+              direction="up"
+              delay={0.5}
+              speed={0.5}
+              exitDelay={0}
+              showTimingFunction="linear"
+              hideTimingFunction="steps(4, end)"
+            >
+              <div style={{
+                width: '100px',
+                height: '100px',
+                backgroundColor: '#0f0',
+                textAlign: 'center',
+                lineHeight: '100px',
+                fontSize: '12px',
+              }}>SlideUp</div>
+            </SlideAnimation>
+          </div>
+        </div>
         <div className="demo">
           <p>SelectMenu组件-下拉选择</p>
           <div className="example">
@@ -62,8 +135,9 @@ class App extends React.Component {
             />
           </div>
         </div>
+        <HomePoster />
         <div className="demo fade-demo">
-          <p>Fade组件</p>
+          <p>Animation-Fade组件</p>
           <div className="example">
             <FadeAnimation show={this.state.animationShow} speed={2}>
               <div style={{
@@ -76,7 +150,7 @@ class App extends React.Component {
               }}>隐藏后销毁元素</div>
             </FadeAnimation>
             <FadeAnimation show={this.state.animationShow} speed={2} needDestroy={false}>
-            <div style={{
+              <div style={{
                 width: '100px',
                 height: '100px',
                 backgroundColor: '#0f0',
