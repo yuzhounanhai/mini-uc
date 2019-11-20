@@ -1,0 +1,18 @@
+@import '../../../../styles/variable';
+
+.#{$cn-prefix}-animation-slide {
+  transition-property: transform, opacity;
+  transition-timing-function: ease;
+}
+.#{$cn-prefix}-animation-slide-down-begin {
+  transform: translateY(-20%);
+}
+.#{$cn-prefix}-animation-slide-up-begin {
+  transform: translateY(20%);
+}
+.#{$cn-prefix}-animation-slide-left-begin {
+  transform: translateX(20%);
+}
+.#{$cn-prefix}-animation-slide-right-begin {
+  transform: translateX(-20%);
+}
