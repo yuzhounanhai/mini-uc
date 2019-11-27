@@ -57,8 +57,8 @@ class SelectMenu extends React.Component<SelectMenuProps, SelectMenuState> {
           if (process.env.NODE_ENV === 'development') {
             console.warn('Key value is repeat. The previous data will be overwritten.');
           }
-          this.listData.filter(i => {
-            return item.key === i.key;
+          this.listData = this.listData.filter(i => {
+            return item.key !== i.key;
           });
         } else {
           this.keyMap.push(item.key);
