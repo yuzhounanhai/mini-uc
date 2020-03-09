@@ -2,6 +2,7 @@ import * as React from 'react';
 import AnimationFade from '@/components/Animation/Fade';
 import SelectMenu from '@/components/SelectMenu';
 import AnimationSlide from '@/components/Animation/Slide';
+import PrivateCodeCard from './components/PrivateCodeCard/index';
 import HomePoster from './components/HomePoster/HomePoster';
 import './App.scss';
 
@@ -20,6 +21,12 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <div className="demo">
+          <p>Interceptor-拦截器</p>
+          <div className="example">
+            <PrivateCodeCard />
+          </div>
+        </div>
         <div className="demo">
           <p>Animation-Slide组件</p>
           <div className="example">

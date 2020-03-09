@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styles from './HomePoster.modules.scss';
+import * as styles from './HomePoster.modules.scss';
 import SlideAnimation from '@/components/Animation/Slide';
 
 export interface HomePosterState {
@@ -45,7 +45,7 @@ export default class HomePoster extends React.Component<{}, HomePosterState> {
         >
           <div className={styles.part}>
             <div className={styles.img}></div>
-            <div className={styles.txt}>设计价值观</div>
+            <div>设计价值观</div>
           </div>
         </SlideAnimation>
         <SlideAnimation
@@ -57,7 +57,7 @@ export default class HomePoster extends React.Component<{}, HomePosterState> {
         >
           <div className={styles.part}>
             <div className={styles.img}></div>
-            <div className={styles.txt}>视觉</div>
+            <div>视觉</div>
           </div>
         </SlideAnimation>
         <SlideAnimation
@@ -69,7 +69,7 @@ export default class HomePoster extends React.Component<{}, HomePosterState> {
         >
           <div className={styles.part}>
             <div className={styles.img}></div>
-            <div className={styles.txt}>可视化</div>
+            <div>可视化</div>
           </div>
         </SlideAnimation>
         <SlideAnimation
@@ -81,7 +81,7 @@ export default class HomePoster extends React.Component<{}, HomePosterState> {
         >
           <div className={styles.part}>
             <div className={styles.img}></div>
-            <div className={styles.txt}>动效</div>
+            <div>动效</div>
           </div>
         </SlideAnimation>
       </div>

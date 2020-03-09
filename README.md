@@ -19,3 +19,4 @@ yarn add mini-uc
 + [AnimationFade](https://github.com/yuzhounanhai/mini-uc/blob/master/src/components/Animation/Fade/doc/desc.md)
 + [AnimationSlide](https://github.com/yuzhounanhai/mini-uc/blob/master/src/components/Animation/Slide/doc/desc.md): 0.2.0版本新增
 + [SelectMenu](https://github.com/yuzhounanhai/mini-uc/blob/master/src/components/SelectMenu/doc/desc.md)
++ [Interceptor](https://github.com/yuzhounanhai/mini-uc/blob/master/src/components/Animation/Slide/doc/desc.md): 0.2.1版本新增
