@@ -4,6 +4,8 @@
 
 `AnimationSlide` 基于行内 CSS3 transition 实现，这意味着您在行内附加的有关 `transform/opacity/transition` 等相关属性，可能会影响到这一组件的表现。
 
+![Slide组件使用示例](images/slide.gif)
+
 ## 使用示例
 
 ```
@@ -68,6 +70,98 @@ $cn-prefix: mini-uc
 #page .header .mini-uc-animation-slide-down-begin {
   transform: translateY(-100px);
 }
+```
+
+### 应用场景
+
+一些网站会在页面滚动过程中动效的展示一些元素，这些元素是逐渐展现并带有上升效果的，利用 `AnimationSlide` 组件你就可以实现这一效果。
+
+![AnimationSlide的应用](images/slideDemo.gif)
+
+渲染部分代码如下：
+
+```javascript
+class Poster extends React.Component {
+  render() {
+    const { isShow } = this.state;
+    return (
+      <div className={styles.wrapper} ref={this.wrapperRef}>
+        <SlideAnimation
+          direction="up"
+          show={isShow}
+          speed={0.3}
+          delay={0}
+          exitDelay={0.45}
+        >
+          <div className={styles.part}>
+            <div className={styles.img}></div>
+            <div>设计价值观</div>
+          </div>
+        </SlideAnimation>
+        <SlideAnimation
+          show={isShow}
+          direction="up"
+          speed={0.3}
+          delay={0.15}
+          exitDelay={0.3}
+        >
+          <div className={styles.part}>
+            <div className={styles.img}></div>
+            <div>视觉</div>
+          </div>
+        </SlideAnimation>
+        <SlideAnimation
+          show={isShow}
+          direction="up"
+          delay={0.3}
+          speed={0.3}
+          exitDelay={0.15}
+        >
+          <div className={styles.part}>
+            <div className={styles.img}></div>
+            <div>可视化</div>
+          </div>
+        </SlideAnimation>
+        <SlideAnimation
+          show={isShow}
+          direction="up"
+          delay={0.45}
+          speed={0.3}
+          exitDelay={0}
+        >
+          <div className={styles.part}>
+            <div className={styles.img}></div>
+            <div>动效</div>
+          </div>
+        </SlideAnimation>
+      </div>
+    )
+  }
+}
+```
+
+上面的代码中，真正存在动效的部分已经被 `AnimationSlide` 组件包裹，将由 `isShow` 来控制展现与隐藏，那么下一步我们只需要检测这些内容是否进入视图中，模拟代码如下：
+
+```javascript
+  componentDidMount() {
+    window.addEventListener('scroll', () => {
+      const wrapper = this.wrapperRef.current;
+      const bcr = wrapper.getBoundingClientRect();
+      if ((bcr.top + 100) < window.innerHeight) {
+        if (!this.state.isShow) {
+          this.setState({
+            isShow: true
+          });
+        }
+      } else {
+        if (this.state.isShow) {
+          this.setState({
+            isShow: false,
+          });
+        }
+      }
+    })
+  }
 ```
 
 ## API

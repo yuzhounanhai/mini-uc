@@ -2,6 +2,8 @@
 
 AnimationFade 组件提供一种淡入淡出的过渡效果。
 
+![Fade组件效果示例](images/fade.gif)
+
 ## 使用示例
 
 ```
