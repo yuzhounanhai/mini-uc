@@ -29,7 +29,7 @@ const isLock = () => {
 }
 
 export default {
-  name: name,
+  name: Symbol(),
   add: add,
   forceFree: forceFree,
   isLock: isLock,
