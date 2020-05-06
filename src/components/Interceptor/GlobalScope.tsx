@@ -1,6 +1,4 @@
-export interface GlobalScopeConfig {
-  onPrevent?: () => void,
-}
+import { GlobalScopeConfig, ISFConfig } from './interface';
 
 const fnList: Function[] = [];
 
@@ -12,11 +10,13 @@ const forceFree = (): void => {
   lock = false;
 }
 
-const add = (fn: Function) => {
+const add = (fn: Function, config?: ISFConfig) => {
   if (fn && typeof fn === 'function') {
     const customFn = (...args: any[]) => {
       if (lock) {
-        if (globalScopeConfigs.onPrevent) {
+        if (config && config.onPrevent) {
+          typeof config.onPrevent === 'function' && config.onPrevent();
+        } else if (globalScopeConfigs.onPrevent) {
           typeof globalScopeConfigs.onPrevent === 'function' && globalScopeConfigs.onPrevent();
         }
         return;

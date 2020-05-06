@@ -193,7 +193,19 @@ global.setOnPrevent(() => {
   console.log('全局拥挤中,请求已经被拒绝');
 });
 ```
+###### 全局作用域中各方法的特殊表现
 
+对于全局作用域中某些特殊方法,你可以单独设置这一方法的拦截表现
+
+```javascript
+import { Interceptor } from 'mini-uc';
+
+// 创建/引用scope1拦截作用域
+const global = Interceptor.use();
+global.add(fn, () => {
+  console.log('请稍候');
+});
+```
 
 ## 在React中的实践
 

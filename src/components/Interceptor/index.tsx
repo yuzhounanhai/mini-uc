@@ -1,5 +1,6 @@
-import createScope, { IScope, IScopeConfig } from './Scope';
+import createScope from './Scope';
 import globalScope from './GlobalScope';
+import { IScope, IScopeConfig } from './interface';
 
 const GLOBAL_SCOPE_MAP: { [name: string]: IScope } = {};
 

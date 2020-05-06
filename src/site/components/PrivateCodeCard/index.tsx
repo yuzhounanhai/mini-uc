@@ -17,7 +17,11 @@ class PrivateCodeCard extends React.Component<{}, {}> {
     scope2.setOnPrevent(() => {
       alert('正在处理scope2,请稍候');
     });
-    this.onClickGlobalBtn = scope.add(this.onClickGlobalBtn.bind(this));
+    this.onClickGlobalBtn = scope.add(this.onClickGlobalBtn.bind(this), {
+      onPrevent: () => {
+        alert('正在处理');
+      }
+    });
     this.onClickFreeScope1 = this.onClickFreeScope1.bind(this);
     this.onClickFreeScope2 = this.onClickFreeScope2.bind(this);
     this.onClickScope11 = scope1.add(this.onClickScope11.bind(this));

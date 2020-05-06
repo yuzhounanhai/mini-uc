@@ -1,20 +1,9 @@
 import GlobalScope, { globalScopeConfigs } from './GlobalScope';
-
-export interface IScope {
-  name: string | symbol,
-  add: (fn: Function, config?: ISFConfig) => (...params: any) => any,
-  forceFree: () => void,
-  isLock: () => boolean,
-  setOnPrevent: (v: () => void) => void,
-}
-
-export interface ISFConfig {
-  onPrevent?: () => void,
-}
-
-export interface IScopeConfig {
-  onPrevent?: () => void,
-};
+import {
+  IScope,
+  ISFConfig,
+  IScopeConfig,
+} from './interface';
 
 function createScope(name: string | symbol, scopeConfig?: IScopeConfig): IScope {
   if (!name) {
