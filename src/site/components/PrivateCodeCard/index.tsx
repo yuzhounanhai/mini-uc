@@ -6,16 +6,33 @@ class PrivateCodeCard extends React.Component<{}, {}> {
   constructor(props: {}) {
     super(props);
     const scope = Interceptor.use();
+    scope.setOnPrevent(() => {
+      alert('正在处理global,请稍候');
+    });
     const scope1 = Interceptor.use('scope1');
+    scope1.setOnPrevent(() => {
+      alert('正在处理scope1,请稍候');
+    });
     const scope2 = Interceptor.use('scope2');
+    scope2.setOnPrevent(() => {
+      alert('正在处理scope2,请稍候');
+    });
     this.onClickGlobalBtn = scope.add(this.onClickGlobalBtn.bind(this));
     this.onClickFreeScope1 = this.onClickFreeScope1.bind(this);
     this.onClickFreeScope2 = this.onClickFreeScope2.bind(this);
     this.onClickScope11 = scope1.add(this.onClickScope11.bind(this));
-    this.onClickScope12 = scope1.add(this.onClickScope12.bind(this));
+    this.onClickScope12 = scope1.add(this.onClickScope12.bind(this), {
+      onPrevent: () => {
+        alert('请手动解锁作用域1');
+      }
+    });
     this.onClickScope21 = scope2.add(this.onClickScope21.bind(this));
     this.onClickScope22 = scope2.add(this.onClickScope22.bind(this));
-    this.onClickPersonal = Interceptor.add(this.onClickPersonal.bind(this));
+    this.onClickPersonal = Interceptor.add(this.onClickPersonal.bind(this), {
+      onPrevent: () => {
+        alert('正在处理,请稍候');
+      }
+    });
   }
 
   componentWillUnmount() {

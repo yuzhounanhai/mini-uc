@@ -1,4 +1,4 @@
-import createScope, { IScope } from './Scope';
+import createScope, { IScope, IScopeConfig } from './Scope';
 import globalScope from './GlobalScope';
 
 const GLOBAL_SCOPE_MAP: { [name: string]: IScope } = {};
@@ -25,11 +25,17 @@ const Interceptor = {
       return globalScope;
     }
   },
-  add: (fn: Function) => {
-    const scope = createScope(Symbol());
+  add: (fn: Function, config?: IScopeConfig) => {
+    const scope = createScope(Symbol(), config);
     return scope.add(fn);
   },
   destory: (content: string | IScope): void => {
+    let name = '';
+    if (typeof content === 'string') {
+      name = content;
+    } else if (typeof content.name === 'string') {
+      name = content.name;
+    }
     if (GLOBAL_SCOPE_MAP.hasOwnProperty(name)) {
       delete GLOBAL_SCOPE_MAP[name];
     }
