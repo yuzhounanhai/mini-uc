@@ -165,7 +165,7 @@ export default PermissionPassport;
 
 ```javascript
 <Passport
-   noPassContent={(
+   notPassContent={(
       <span>您暂未拥有权限查看当前内容</span>
    )}
    condition={false}
@@ -184,5 +184,5 @@ export default PermissionPassport;
 | allowMinRole | 角色匹配项-允许的最低权限角色,使用这个api需要同步传递allRoles | string | | |
 | allRoles | 角色匹配项-所有角色映射，允许接收一个数组或者权限权重映射 | string[] &#124; { [roleName: string]: number } | | |
 | condition | 条件匹配项 | any | | |
-| noPassContent | 没有通过校验时显示的内容 | ReactNodes | | |
+| notPassContent | 没有通过校验时显示的内容 | ReactNodes | | |
 | onAuthCheck | 授权匹配项-接收一个方法，并给这个方法传递组件内部分props的值，该函数需要返回一个布尔值，表示授权验证是否通过。 | (props: PassportProps) => boolean | | |

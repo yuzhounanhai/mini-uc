@@ -14,7 +14,7 @@ export interface SafelyPassportProps {
 
 export interface PassportProps extends SafelyPassportProps {
   onAuthCheck?: (props: SafelyPassportProps) => boolean;
-  noPassContent?: React.ReactNode;
+  notPassContent?: React.ReactNode;
   children?: React.ReactNode;
 };
 
@@ -30,7 +30,7 @@ function Passport(props: PassportProps) {
   const {
     children,
     onAuthCheck,
-    noPassContent,
+    notPassContent = null,
     ...safelyOtherProps
   } = props;
   if (mode !== '&' && mode !== '|') {
@@ -76,7 +76,7 @@ function Passport(props: PassportProps) {
   if (isPass) {
     return children;
   } else {
-    return noPassContent;
+    return notPassContent;
   }
 }
 
